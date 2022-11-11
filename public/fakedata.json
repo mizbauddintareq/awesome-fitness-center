@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "name": "Strength Workout",
+    "desc": "Resistance training (also called strength training or weight training) is the use of resistance to muscular contraction to build strength, anaerobic endurance and size of skeletal muscles.",
+    "duration": "9 min",
+    "img": "https://i.ibb.co/T1pty81/strength-training.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Cardio Session",
+    "desc": "Cardio is defined as any type of exercise that gets your heart rate up and keeps it up for a prolonged period of time. Your respiratory system will start working harder as you begin to breathe faster and more deeply.",
+    "duration": "15 min",
+    "img": "https://i.ibb.co/nr4w8JF/cardrio-training.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Endurance Session",
+    "desc": "Endurance training is the act of exercising to increase endurance. The term endurance training generally refers to training the aerobic system as opposed to the anaerobic system",
+    "duration": "10 min",
+    "img": "https://i.ibb.co/CP93ZK9/endurance-training.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Zumba Session",
+    "desc": "A Zumba workout is an effective way to lose weight without even realizing it. The dance moves make burning calories fun and high energy. It can burn anywhere from 300 to 700+ calories depending on intensity levels and other factors.",
+    "duration": "17 min",
+    "img": "https://i.ibb.co/SRxsPns/Zomba.jpg"
+  },
+  {
+    "id": 5,
+    "name": "CrossFit",
+    "desc": "CrossFit is a form of high-intensity interval training and comparable to other high-intensity exercises. CrossFit exercises increase VO2max, strength, endurance, and improves the body composition (e. g. lean body mass).",
+    "duration": "23 min",
+    "img": "https://i.ibb.co/qWfSD7Y/crossfit-traning.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Weight Loss ",
+    "desc": "And while it's true that doing steady state cardio probably will help with weight loss, experts say it's totally unnecessary if your main goal is fat loss. In fact, you can lose weight just by lifting weights.",
+    "duration": "11 min",
+    "img": "https://i.ibb.co/ryFhNNz/weight-loss.jpg"
+  }
+]
