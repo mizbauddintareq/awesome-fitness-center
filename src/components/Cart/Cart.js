@@ -1,6 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Cart.css";
-const Cart = () => {
+const Cart = ({ data }) => {
+  const [time, setTime] = useState(0);
+  const totalTime = data.reduce((c, p) => c + p.duration, 0);
+
+  const handleBreak = (duration) => {
+    setTime(duration);
+    console.log(time);
+  };
+
   return (
     <div className="py-4">
       <div className="d-flex align-items-center">
@@ -34,22 +42,27 @@ const Cart = () => {
       <div className="my-4">
         <h3>Add a break</h3>
         <div className="bg-white d-flex justify-content-between px-2 py-4">
-          <span className="cart-time rounded-circle fw-bold">20m</span>
-          <span className="cart-time rounded-circle fw-bold">20m</span>
-          <span className="cart-time rounded-circle fw-bold">20m</span>
-          <span className="cart-time rounded-circle fw-bold">20m</span>
+          {data.slice(0, 5).map((time) => (
+            <span
+              key={time.id}
+              onClick={() => handleBreak(time?.duration)}
+              className="cart-time rounded-circle fw-bold"
+            >
+              {time?.duration}m
+            </span>
+          ))}
         </div>
       </div>
       <div>
         <h3>Exercise Details</h3>
         <div className="bg-white py-4 my-4 px-2">
           <h5>
-            <span className="fw-bold">Exercise time:</span> 200 second
+            <span className="fw-bold">Exercise time:</span> {totalTime} Minutes
           </h5>
         </div>
         <div className="bg-white py-4 my-4 px-2">
           <h5>
-            <span className="fw-bold">Break time:</span> 200 second
+            <span className="fw-bold">Break time:</span> {time} Minute
           </h5>
         </div>
         <div className="text-center">
