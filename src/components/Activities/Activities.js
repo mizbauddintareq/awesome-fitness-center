@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Activity from "../Activity/Activity";
 import Cart from "../Cart/Cart";
-
+import Swal from "sweetalert2";
 const Activities = () => {
   const [activities, setActivities] = useState([]);
 
@@ -10,12 +10,18 @@ const Activities = () => {
   const handleAddToCart = (info) => {
     const uniqueData = cart.find((cartData) => cartData.id === info.id);
     if (uniqueData) {
-      alert("Item already added");
+      Swal.fire({
+        icon: "error",
+        title: "Item Already Added",
+      });
       return;
     }
     const newData = [...cart, info];
     if (newData.length > 5) {
-      alert("you can add maximum 5 activities");
+      Swal.fire({
+        icon: "error",
+        title: "U can add maximum 5 activities",
+      });
       return;
     }
     setCart(newData);
