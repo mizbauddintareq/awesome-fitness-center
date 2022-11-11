@@ -1,13 +1,24 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Cart.css";
 const Cart = ({ data }) => {
   const [time, setTime] = useState(0);
   const totalTime = data.reduce((c, p) => c + p.duration, 0);
 
   const handleBreak = (duration) => {
+    // const getStoredCart = localStorage.getItem("time");
+    // const storedCart = JSON.parse(getStoredCart);
+
+    // if(storedCart.)
+
+    localStorage.setItem("time", JSON.stringify(duration));
     setTime(duration);
-    console.log(time);
   };
+
+  useEffect(() => {
+    const getTimeFromLs = localStorage.getItem("time");
+    const newTime = JSON.parse(getTimeFromLs);
+    setTime(newTime);
+  }, [time]);
 
   return (
     <div className="py-4">
