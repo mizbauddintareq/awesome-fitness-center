@@ -2,7 +2,7 @@ import React from "react";
 import "./Cart.css";
 const Cart = () => {
   return (
-    <div>
+    <div className="py-4">
       <div className="d-flex align-items-center">
         <div>
           <img
@@ -16,7 +16,7 @@ const Cart = () => {
           <p className="fw-bold">Cox's Bazar</p>
         </div>
       </div>
-      <div className="d-flex justify-content-between text-center my-5 bg-white p-2">
+      <div className="d-flex justify-content-between text-center my-4 bg-white p-2">
         <div>
           <h4>63 Kg</h4>
           <p>Weight</p>
@@ -31,13 +31,29 @@ const Cart = () => {
         </div>
       </div>
 
-      <div>
+      <div className="my-4">
         <h3>Add a break</h3>
         <div className="bg-white d-flex justify-content-between px-2 py-4">
           <span className="cart-time rounded-circle fw-bold">20m</span>
           <span className="cart-time rounded-circle fw-bold">20m</span>
           <span className="cart-time rounded-circle fw-bold">20m</span>
           <span className="cart-time rounded-circle fw-bold">20m</span>
+        </div>
+      </div>
+      <div>
+        <h3>Exercise Details</h3>
+        <div className="bg-white py-4 my-4 px-2">
+          <h5>
+            <span className="fw-bold">Exercise time:</span> 200 second
+          </h5>
+        </div>
+        <div className="bg-white py-4 my-4 px-2">
+          <h5>
+            <span className="fw-bold">Break time:</span> 200 second
+          </h5>
+        </div>
+        <div className="text-center">
+          <button className="btn btn-danger px-5 fw-bold">Add To Cart</button>
         </div>
       </div>
     </div>
