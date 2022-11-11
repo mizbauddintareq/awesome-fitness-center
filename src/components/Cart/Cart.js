@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import "./Cart.css";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 const Cart = ({ data }) => {
   const [time, setTime] = useState(0);
-  const totalTime = data.reduce((c, p) => c + p.duration, 0);
-
+  const totalTime = data?.reduce((c, p) => c + p.duration, 0);
+  const notify = () => toast("Wow! Nice Selection");
   const handleBreak = (duration) => {
     // const getStoredCart = localStorage.getItem("time");
     // const storedCart = JSON.parse(getStoredCart);
@@ -19,7 +21,7 @@ const Cart = ({ data }) => {
     const newTime = JSON.parse(getTimeFromLs);
     setTime(newTime);
   }, [time]);
-
+  console.log(time);
   return (
     <div className="py-4">
       <div className="d-flex align-items-center">
@@ -77,7 +79,12 @@ const Cart = ({ data }) => {
           </h5>
         </div>
         <div className="text-center">
-          <button className="btn btn-danger px-5 fw-bold">Add To Cart</button>
+          <div>
+            <button className="btn btn-danger px-5 fw-bold" onClick={notify}>
+              Add To Cart
+            </button>
+            <ToastContainer />
+          </div>
         </div>
       </div>
     </div>

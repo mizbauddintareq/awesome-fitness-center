@@ -42,7 +42,7 @@ const Activities = () => {
           </div>
         </div>
         <div className="col-md-3 cart-section">
-          <Cart data={cart} />
+          <Cart data={cart} setCart={setCart} />
         </div>
       </div>
     </div>
