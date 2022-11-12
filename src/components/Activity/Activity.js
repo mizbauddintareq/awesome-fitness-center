@@ -1,3 +1,4 @@
+import { ShoppingCartIcon } from "@heroicons/react/24/solid";
 import React from "react";
 import "./Activity.css";
 const Activity = ({ data, handleAddToCart, cartData }) => {
@@ -5,7 +6,6 @@ const Activity = ({ data, handleAddToCart, cartData }) => {
   const info = {
     id,
     duration,
-    isAdded: true,
   };
 
   return (
@@ -21,7 +21,7 @@ const Activity = ({ data, handleAddToCart, cartData }) => {
           onClick={() => handleAddToCart(info)}
           className="card-btn fw-bold"
         >
-          Add To Cart
+          Add Activity <ShoppingCartIcon className="card-icon" />
         </button>
       </div>
     </div>

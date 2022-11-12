@@ -1,12 +1,13 @@
 import React from "react";
 import "./Menubar.css";
+import { BoltIcon } from "@heroicons/react/24/solid";
 const Menubar = () => {
   return (
     <nav className="navbar navbar-expand-lg">
       <div className="container-fluid card-shadow py-2">
-        <a className="navbar-brand" href="#">
-          Awesome Fitness
-        </a>
+        <h1 className="navbar-brand logo" href="#">
+          <BoltIcon className="logo-icon" /> Awesome Fitness
+        </h1>
         <button
           className="navbar-toggler"
           type="button"
@@ -19,9 +20,9 @@ const Menubar = () => {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+          <ul className="menu navbar-nav ms-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">
+              <a className="nav-link" aria-current="page" href="#">
                 Home
               </a>
             </li>
@@ -53,7 +54,7 @@ const Menubar = () => {
               placeholder="Search"
               aria-label="Search"
             />
-            <button className="btn btn-outline-success" type="submit">
+            <button className="btn menu-btn" type="submit">
               Search
             </button>
           </form>

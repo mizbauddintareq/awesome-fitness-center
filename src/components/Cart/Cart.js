@@ -2,14 +2,22 @@ import React, { useEffect, useState } from "react";
 import "./Cart.css";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { PaperAirplaneIcon } from "@heroicons/react/24/solid";
 const Cart = ({ cartData, activities }) => {
+  const [breakTime, setBreakTime] = useState(0);
   const notify = () => toast("You've completed today's activities");
 
   const totalTime = cartData.reduce((c, p) => c + p.duration, 0);
 
   const handleBreakTime = (breakDuration) => {
-    console.log(breakDuration);
+    localStorage.setItem("break-time", JSON.stringify(breakDuration));
+    setBreakTime(breakDuration);
   };
+
+  useEffect(() => {
+    const getTimeFromLs = JSON.parse(localStorage.getItem("break-time"));
+    setBreakTime(getTimeFromLs);
+  }, [breakTime]);
 
   return (
     <div className="py-4">
@@ -64,13 +72,17 @@ const Cart = ({ cartData, activities }) => {
         </div>
         <div className="bg-white py-4 my-4 px-2">
           <h5>
-            <span className="fw-bold">Break time:</span> 0 Seconds
+            <span className="fw-bold">Break time:</span> {breakTime} Seconds
           </h5>
         </div>
         <div className="text-center">
           <div>
-            <button className="btn btn-danger px-5 fw-bold" onClick={notify}>
-              Activity Completed
+            <button
+              style={{ backgroundColor: "cornflowerblue" }}
+              className="btn px-5 fw-bold text-white"
+              onClick={notify}
+            >
+              Activity Completed <PaperAirplaneIcon className="cart-icon" />
             </button>
             <ToastContainer />
           </div>
