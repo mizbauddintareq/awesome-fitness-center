@@ -21,7 +21,7 @@ const Activities = () => {
   return (
     <div className="container-fluid">
       <div className="row d-flex justify-content-between">
-        <div className="col-md-8 my-5">
+        <div className="col-md-8 my-5 sticky-top">
           <div className="row row-cols-1 row-cols-md-3 g-4">
             {activities.map((activity) => (
               <Activity
