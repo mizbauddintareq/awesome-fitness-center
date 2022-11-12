@@ -75,7 +75,8 @@ const Cart = ({ cartData, activities }) => {
           </div>
           <div className="bg-white my-4 small-box">
             <h5>
-              <span className="fw-bold">Break time:</span> {breakTime} Seconds
+              <span className="fw-bold">Break time:</span>{" "}
+              {breakTime ? breakTime : "0"} Seconds
             </h5>
           </div>
           <div className="text-center">
