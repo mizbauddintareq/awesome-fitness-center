@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./Cart.css";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -13,12 +13,9 @@ const Cart = ({ cartData, activities }) => {
     localStorage.setItem("break-time", JSON.stringify(breakDuration));
     setBreakTime(breakDuration);
   };
+  const getTimeFromLs = JSON.parse(localStorage.getItem("break-time"));
 
-  useEffect(() => {
-    const getTimeFromLs = JSON.parse(localStorage.getItem("break-time"));
-    setBreakTime(getTimeFromLs);
-  }, [breakTime]);
-
+  console.log(breakTime);
   return (
     <div>
       <div className="py-4">
@@ -76,7 +73,7 @@ const Cart = ({ cartData, activities }) => {
           <div className="bg-white my-4 small-box">
             <h5>
               <span className="fw-bold">Break time:</span>{" "}
-              {breakTime ? breakTime : "0"} Seconds
+              {getTimeFromLs ? getTimeFromLs : 0} Seconds
             </h5>
           </div>
           <div className="text-center">
