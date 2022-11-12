@@ -20,8 +20,8 @@ const Activities = () => {
 
   return (
     <div className="container-fluid">
-      <div className="row">
-        <div className="col-md-9 my-5">
+      <div className="row d-flex justify-content-between">
+        <div className="col-md-8 my-5">
           <div className="row row-cols-1 row-cols-md-3 g-4">
             {activities.map((activity) => (
               <Activity
@@ -33,7 +33,7 @@ const Activities = () => {
             ))}
           </div>
         </div>
-        <div className="col-md-3 cart-section">
+        <div className="col-md-3 cart-section sticky-top">
           <Cart cartData={cart} activities={activities} />
         </div>
       </div>

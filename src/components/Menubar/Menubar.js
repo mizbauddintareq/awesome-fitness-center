@@ -1,12 +1,13 @@
 import React from "react";
 import "./Menubar.css";
-import { BoltIcon } from "@heroicons/react/24/solid";
+import { RocketLaunchIcon } from "@heroicons/react/24/solid";
 const Menubar = () => {
   return (
     <nav className="navbar navbar-expand-lg">
       <div className="container-fluid card-shadow py-2">
         <h1 className="navbar-brand logo" href="#">
-          <BoltIcon className="logo-icon" /> Awesome Fitness
+          <RocketLaunchIcon className="logo-icon" />
+          Awesome Fitness
         </h1>
         <button
           className="navbar-toggler"

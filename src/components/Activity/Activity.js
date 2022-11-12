@@ -13,9 +13,11 @@ const Activity = ({ data, handleAddToCart, cartData }) => {
       <div className="card h-100 p-2 border-0  activity-card">
         <img src={img} className="card-img-top card-image" alt="..." />
         <div className="card-body">
-          <h5 className="card-title">{name}</h5>
+          <h5 className="card-title fw-bold">{name}</h5>
           <p>{desc}</p>
-          <p className="card-text fw-bold">Duration: {duration} Second</p>
+          <p className="card-text">
+            Duration: <span className="fw-bold">{duration} Second</span>
+          </p>
         </div>
         <button
           onClick={() => handleAddToCart(info)}

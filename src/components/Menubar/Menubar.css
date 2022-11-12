@@ -5,12 +5,16 @@
 }
 
 .logo {
-  font-size: 30px;
+  font-size: 25px;
   font-weight: bold;
+  color: cornflowerblue;
+  cursor: pointer;
+}
+.logo:hover {
   color: cornflowerblue;
 }
 .logo-icon {
-  height: 30px;
+  height: 25px;
 }
 .menu li a {
   font-weight: bold;
