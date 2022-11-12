@@ -2,37 +2,49 @@
   {
     "id": 1,
     "name": "Strength Workout",
-    "duration": 9,
-    "img": "https://i.ibb.co/T1pty81/strength-training.jpg"
+    "duration": 30,
+    "breakTime": 10,
+    "desc": "Strength training or resistance training involves the performance of physical exercises that are designed to improve strength and endurance.",
+    "img": "https://i.ibb.co/fH3XcvV/pexels-leon-ardho-1552242-3.jpg"
   },
   {
     "id": 2,
     "name": "Cardio Session",
-    "duration": 7,
-    "img": "https://i.ibb.co/nr4w8JF/cardrio-training.jpg"
+    "duration": 50,
+    "breakTime": 20,
+    "desc": "Cardio is defined as any type of exercise that gets your heart rate up and keeps it up for a prolonged period of time.",
+    "img": "https://i.ibb.co/zX0Sfbx/pexels-rodnae-productions-9064354.jpg"
   },
   {
     "id": 3,
     "name": "Endurance Session",
-    "duration": 5,
-    "img": "https://i.ibb.co/CP93ZK9/endurance-training.jpg"
+    "duration": 25,
+    "breakTime": 30,
+    "desc": "The ability to withstand hardship or adversity. especially : the ability to sustain a prolonged stressful effort or activity.",
+    "img": "https://i.ibb.co/BBSXTzt/pexels-andrea-piacquadio-3768722.jpg"
   },
   {
     "id": 4,
     "name": "Zumba Session",
-    "duration": 2,
-    "img": "https://i.ibb.co/SRxsPns/Zomba.jpg"
+    "duration": 35,
+    "breakTime": 40,
+    "desc": "Zumba targets lots of different muscle groups at once for total body toning. Boosts your heart health.",
+    "img": "https://i.ibb.co/ZxPb1HC/pexels-andrea-piacquadio-3775566.jpg"
   },
   {
     "id": 5,
     "name": "CrossFit",
-    "duration": 6,
-    "img": "https://i.ibb.co/qWfSD7Y/crossfit-traning.jpg"
+    "duration": 60,
+    "breakTime": 50,
+    "desc": "A form of high intensity interval training, CrossFit is a strength and conditioning workout that is made up of functional movement.",
+    "img": "https://i.ibb.co/Hd3wVsj/pexels-cesar-gale-o-3253499.jpg"
   },
   {
     "id": 6,
-    "name": "Weight Loss ",
-    "duration": 3,
-    "img": "https://i.ibb.co/ryFhNNz/weight-loss.jpg"
+    "name": "Weight Loss",
+    "duration": 45,
+    "breakTime": 60,
+    "desc": "Weight loss is a decrease in body weight resulting from either voluntary (diet, exercise) or involuntary (illness) circumstances.",
+    "img": "https://i.ibb.co/Nndfm2H/pexels-the-lazy-artist-gallery-2247179.jpg"
   }
 ]

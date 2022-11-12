@@ -2,26 +2,15 @@ import React, { useEffect, useState } from "react";
 import "./Cart.css";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-const Cart = ({ data }) => {
-  const [time, setTime] = useState(0);
-  const totalTime = data?.reduce((c, p) => c + p.duration, 0);
-  const notify = () => toast("Wow! Nice Selection");
-  const handleBreak = (duration) => {
-    // const getStoredCart = localStorage.getItem("time");
-    // const storedCart = JSON.parse(getStoredCart);
+const Cart = ({ cartData, activities }) => {
+  const notify = () => toast("You've completed today's activities");
 
-    // if(storedCart.)
+  const totalTime = cartData.reduce((c, p) => c + p.duration, 0);
 
-    localStorage.setItem("time", JSON.stringify(duration));
-    setTime(duration);
+  const handleBreakTime = (breakDuration) => {
+    console.log(breakDuration);
   };
 
-  useEffect(() => {
-    const getTimeFromLs = localStorage.getItem("time");
-    const newTime = JSON.parse(getTimeFromLs);
-    setTime(newTime);
-  }, [time]);
-  console.log(time);
   return (
     <div className="py-4">
       <div className="d-flex align-items-center">
@@ -55,13 +44,13 @@ const Cart = ({ data }) => {
       <div className="my-4">
         <h3>Add a break</h3>
         <div className="bg-white d-flex justify-content-between px-2 py-4">
-          {data.slice(0, 5).map((time) => (
+          {activities.slice(0, 5).map((data) => (
             <span
-              key={time.id}
-              onClick={() => handleBreak(time?.duration)}
+              onClick={() => handleBreakTime(data?.breakTime)}
+              key={data.id}
               className="cart-time rounded-circle fw-bold"
             >
-              {time?.duration}m
+              {data?.breakTime}s
             </span>
           ))}
         </div>
@@ -70,18 +59,18 @@ const Cart = ({ data }) => {
         <h3>Exercise Details</h3>
         <div className="bg-white py-4 my-4 px-2">
           <h5>
-            <span className="fw-bold">Exercise time:</span> {totalTime} Minutes
+            <span className="fw-bold">Exercise time:</span> {totalTime} Seconds
           </h5>
         </div>
         <div className="bg-white py-4 my-4 px-2">
           <h5>
-            <span className="fw-bold">Break time:</span> {time} Minute
+            <span className="fw-bold">Break time:</span> 0 Seconds
           </h5>
         </div>
         <div className="text-center">
           <div>
             <button className="btn btn-danger px-5 fw-bold" onClick={notify}>
-              Add To Cart
+              Activity Completed
             </button>
             <ToastContainer />
           </div>
