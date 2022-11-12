@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./Cart.css";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { PaperAirplaneIcon } from "@heroicons/react/24/solid";
+import { MapPinIcon, PaperAirplaneIcon } from "@heroicons/react/24/solid";
 const Cart = ({ cartData, activities }) => {
   const [breakTime, setBreakTime] = useState(0);
   const notify = () => toast("You've completed today's activities");
@@ -25,33 +25,34 @@ const Cart = ({ cartData, activities }) => {
         <div>
           <img
             className="img-fluid rounded-circle cart-image"
-            src="https://i.ibb.co/wrFdtFB/Logo.png"
+            src="https://i.ibb.co/Dwm2hVy/123140251-1218544191844233-2593076809611943339-n.jpg"
             alt=""
           />
         </div>
-        <div>
+        <div className="ms-3">
           <h5>Mizba Uddin Tareq</h5>
-          <p className="fw-bold">Cox's Bazar</p>
+          <MapPinIcon className="map-icon" />{" "}
+          <span className="fw-bold">Cox's Bazar</span>
         </div>
       </div>
-      <div className="d-flex justify-content-between text-center my-4 bg-white p-2">
-        <div>
+      <div className="d-flex justify-content-between text-center my-4">
+        <div className="small-box bg-white">
           <h4>63 Kg</h4>
           <p>Weight</p>
         </div>
-        <div>
+        <div className="small-box bg-white">
           <h4>6.5 F</h4>
           <p>Height</p>
         </div>
-        <div>
+        <div className="small-box bg-white">
           <h4>29 Yrs</h4>
           <p>Age</p>
         </div>
       </div>
 
-      <div className="my-4">
-        <h3>Add a break</h3>
-        <div className="bg-white d-flex justify-content-between px-2 py-4">
+      <div className="mb-3">
+        <h5>Add a break</h5>
+        <div className="bg-white d-flex justify-content-between small-box">
           {activities.slice(0, 5).map((data) => (
             <span
               onClick={() => handleBreakTime(data?.breakTime)}
@@ -64,13 +65,13 @@ const Cart = ({ cartData, activities }) => {
         </div>
       </div>
       <div>
-        <h3>Exercise Details</h3>
-        <div className="bg-white py-4 my-4 px-2">
+        <h5>Exercise Details</h5>
+        <div className="bg-white small-box">
           <h5>
             <span className="fw-bold">Exercise time:</span> {totalTime} Seconds
           </h5>
         </div>
-        <div className="bg-white py-4 my-4 px-2">
+        <div className="bg-white my-4 small-box">
           <h5>
             <span className="fw-bold">Break time:</span> {breakTime} Seconds
           </h5>

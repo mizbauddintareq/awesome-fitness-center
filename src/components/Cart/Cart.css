@@ -10,3 +10,12 @@
 .cart-icon {
   width: 18px;
 }
+.map-icon {
+  width: 18px;
+}
+.small-box {
+  box-shadow: 5px 5px 10px #a9a9aa77, inset -5px -5px 10px #ffffff7e;
+
+  border-radius: 15px;
+  padding: 10px;
+}
